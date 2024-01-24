@@ -15,6 +15,13 @@ const Contacts = () => {
     const [buttonText, setButtonText] = useState('send')
     const [status, setStatus] = useState({})
 
+    const onFormUpdate = (category, value) => {
+        setFormDetails({
+            ...formDetails,
+            [category]: value
+        })
+    }
+
 
 
 
@@ -25,6 +32,17 @@ const Contacts = () => {
                 <Row className="align-items-center">
                     <Col md={6}>
                         <img src={contactImg} alt="" srcset="" />
+                    </Col>
+                    <Col md={6}>
+                        <h2>Get in touch</h2>
+                        <form action="">
+                            <Row>
+                                <Col sm={6} className='px-1'>
+                                    <input type="text" value={formDetails.firstName} placeholder='First Name' onChange={(e) =>  ('first', e.target.value)}/>
+
+                                </Col>
+                            </Row>
+                        </form>
                     </Col>
                 </Row>
             </Container>

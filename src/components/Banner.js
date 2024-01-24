@@ -56,8 +56,8 @@ const Banner = () => {
                             <h1>Hi I'm Pinju <br />
                             <span className="wrap">{text}</span>
                             </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, cum optio dolorem, minima blanditiis aliquam similique in provident, quibusdam repellat vel soluta corrupti? Impedit reiciendis assumenda consectetur! Iste quasi saepe voluptatibus ducimus eius nam corrupti molestias. Dolorum velit blanditiis, nostrum natus esse adipisci? Sapiente excepturi aliquam in deleniti, totam maxime temporibus quo quod consequuntur quas provident iure enim animi obcaecati!</p>
-                            <button onClick={() => console.log('Fukkk')}>Fvck Ew<ArrowRightCircle size={25}/></button>
+                            <p>Greetings, I'm Pinju Priyam Gogoi, a seasoned professional excelling in Front-End Development, UI/UX Design and Graphic Design. My commitment to excellence is evident in the seamless fusion of cutting-edge technologies and design aesthetics. Explore my portfolio to witness the successful marriage of code and creativity, where each project showcases my expertise in delivering functional, user-centric solutions. Join me on a journey where professionalism meets innovation and discover the impact of strategic design thinking in the ever-evolving digital landscape</p>
+                            <button onClick={() => window.location.href="#connect"}>Get In Touch<ArrowRightCircle size={25}/></button>
                         </Col>
                         <Col xs={12} md={6} xl={5}>
                             <img src={headerImg} alt="header"/>

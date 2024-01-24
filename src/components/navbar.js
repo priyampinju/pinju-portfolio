@@ -49,11 +49,11 @@ const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"><img src={navitem1} alt=""/></a>
-                <a href="#"><img src={navitem2} alt=""/></a>
-                <a href="#"><img src={navitem3} alt=""/></a>
+                <a href="https://www.linkedin.com/in/pinju-priyam"><img src={navitem1} alt=""/></a>
+                <a href="https://www.facebook.com/pinjupriyam"><img src={navitem2} alt=""/></a>
+                <a href="https://www.instagram.com/priyam_pinju"><img src={navitem3} alt=""/></a>
             </div>
-            <button className="vvd" onClick={() => console.log('connect')}> <span> Let's Connect</span> </button>
+            <button className="vvd" onClick={() => window.location.href="#connect"}> <span> Let's Connect</span> </button>
           </span>
         </Navbar.Collapse>
       </Container>
