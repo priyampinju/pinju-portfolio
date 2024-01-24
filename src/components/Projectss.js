@@ -1,42 +1,42 @@
 import React from 'react'
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import butter from '../assets/img/buutterscotch.jpg'
+import red from '../assets/img/red forest.png'
+import pink from '../assets/img/pinkpussy.png'
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import ProjectCard from './ProjectCard'
 
 const Projectss = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Sweet Delight",
+      description: "Designing and development of this Cupcake Store",
+      imgUrl: butter,
     },
     {
-      title: "Business Startup",
+      title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: red,
     },
     {
-      title: "Business Startup",
+      title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: pink,
     },
     {
-      title: "Business Startup",
+      title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: pink,
     },
     {
-      title: "Business Startup",
+      title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: butter,
     },
     {
-      title: "Business Startup",
+      title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: red,
     },
   ];
   return (
@@ -46,7 +46,7 @@ const Projectss = () => {
           <Row>
             <Col>
               <h2>Projects</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p> Discover a diverse collection of my craft that reflects my dedication to creating impactful digital experiences. From sleek and intuitive user interfaces to visually compelling graphic designs.</p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                   <Nav.Item>
