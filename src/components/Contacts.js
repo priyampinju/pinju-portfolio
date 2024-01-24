@@ -51,7 +51,14 @@ const Contacts = () => {
                                 </Col>
                                 <Col>
                                     <textarea rows="8" value={formDetails.message} placeholder='write your message here' onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                                    <button type='submit'> <span>{buttonText}</span></button>
                                 </Col>
+                                {
+                                    status.message &&
+                                    <Col>
+                                    <p className={status.success === false? "danger" : "success"}> {status.message} </p>
+                                    </Col>
+                                }
                             </Row>
                         </form>
                     </Col>
