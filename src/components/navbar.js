@@ -4,6 +4,8 @@ import logo from '../assets/img/logo.svg'
 import navitem1 from '../assets/img/nav-icon1.svg'
 import navitem2 from '../assets/img/nav-icon2.svg'
 import navitem3 from '../assets/img/nav-icon3.svg'
+import logo1 from '../assets/img/logo.jpg'
+import logo2 from '../assets/img/pinlogo.png'
 
 const NavBar = () => {
 
