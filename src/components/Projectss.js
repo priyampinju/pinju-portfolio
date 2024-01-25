@@ -13,7 +13,7 @@ const Projectss = () => {
       title: "Ask her out",
       description: "Website to ask her on a coffe that where she can't click no",
       imgUrl: unclickable,
-      url: 'http://www.pinju-date-proposal.vercel.app'
+      url: 'https://www.pinju-date-proposal.vercel.app'
     },
     {
       title: "Sweet Delight",
