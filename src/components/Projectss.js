@@ -6,6 +6,9 @@ import pink from '../assets/img/pinkpussy.png'
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import ProjectCard from './ProjectCard';
 import unclickable from '../assets/img/unclickable.jpg'
+import iphone from '../assets/img/iphone.png'
+import qr from '../assets/img/qr.png'
+import fl from '../assets/img/fl.png'
 
 const Projectss = () => {
   const projects = [
@@ -16,19 +19,19 @@ const Projectss = () => {
       url: 'https://pinju-date-proposal.vercel.app/'
     },
     {
-      title: "Sweet Delight",
-      description: "Design & Development",
-      imgUrl: red,
+      title: "iPhone Website",
+      description: "iPhone 14 webpage with threeJS",
+      imgUrl: iphone,
+    },
+    {
+      title: "QR Code Generator",
+      description: "Generate QR code for anything and everything",
+      imgUrl: qr,
     },
     {
       title: "Sweet Delight",
       description: "Design & Development",
-      imgUrl: pink,
-    },
-    {
-      title: "Sweet Delight",
-      description: "Design & Development",
-      imgUrl: pink,
+      imgUrl: fl,
     },
     {
       title: "Sweet Delight",
@@ -78,7 +81,16 @@ const Projectss = () => {
                     <Row>
                       {projects.map((project,index) => {
                         return (
-                          <p>{project.title}</p>
+                          <ProjectCard key = {index} {...project} />
+                        )
+                      })}
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey= "third">
+                    <Row>
+                      {projects.map((project,index) => {
+                        return (
+                          <ProjectCard key = {index} {...project} />
                         )
                       })}
                     </Row>

@@ -37,6 +37,7 @@ const Contacts = () => {
                         <h2>Get in touch</h2>
                         <form action="">
                             <Row>
+                                
                                 <Col sm={6} className='px-1'>
                                     <input type="text" value={formDetails.firstName} placeholder='First Name' onChange={(e) =>  onFormUpdate('first', e.target.value)}/>
                                 </Col>
