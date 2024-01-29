@@ -14,14 +14,15 @@ const Projectss = () => {
   const projects = [
     {
       title: "Ask her out",
-      description: "Website to ask her on a coffe that where she can't click no",
+      description: "Website to ask her on a coffe date where she can't click no",
       imgUrl: unclickable,
       url: 'https://pinju-date-proposal.vercel.app/'
     },
     {
-      title: "iPhone Website",
-      description: "iPhone 14 webpage with threeJS",
+      title: "Tinder Clone",
+      description: "Tinder Clone using react, MaterialUi and Firebase",
       imgUrl: iphone,
+      url: 'https://tinder-by-pinju.vercel.app'
     },
     {
       title: "QR Code Generator",
