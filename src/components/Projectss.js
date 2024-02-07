@@ -54,21 +54,9 @@ const Projectss = () => {
           <Row>
             <Col>
               <h2>Projects</h2>
-              <p> Discover a diverse collection of my craft that reflects my dedication to creating impactful digital experiences. From sleek and intuitive user interfaces to visually compelling graphic designs.</p>
+              <p> Here's a collection of some of the recent projects. </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                  <Nav.Item>
-                    <Nav.Link eventKey="first">React</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">Javascript</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="third">CSS</Nav.Link>
-                  </Nav.Item>
-                </Nav>
                 <Tab.Content id="slideInUp">
-                  <Tab.Pane eventKey="first">
                     <Row>
                       {
                         projects.map((project, index) => {
@@ -79,25 +67,6 @@ const Projectss = () => {
                         })
                       }
                     </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey= "second">
-                    <Row>
-                      {projects.map((project,index) => {
-                        return (
-                          <ProjectCard key = {index} {...project} />
-                        )
-                      })}
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey= "third">
-                    <Row>
-                      {projects.map((project,index) => {
-                        return (
-                          <ProjectCard key = {index} {...project} />
-                        )
-                      })}
-                    </Row>
-                  </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>
             </Col>

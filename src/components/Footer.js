@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import logo from '../assets/img/logopin1.png'
+import logo from '../assets/img/pin-logo-white.png'
 import navitem1 from '../assets/img/nav-icon1.svg'
 import navitem2 from '../assets/img/nav-icon2.svg'
 import navitem3 from '../assets/img/nav-icon3.svg'
