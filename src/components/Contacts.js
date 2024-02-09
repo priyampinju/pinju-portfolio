@@ -98,26 +98,35 @@
 import React, { useRef, useState } from 'react'
 import contactImg from '../assets/img/contact-img.svg'
 import { Container, Row, Col } from 'react-bootstrap'
-// import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
     const [buttonText, setButtonText] = useState('send');
+    const [status, setStatus] = useState({})
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-    
+        // Change button text to 'Sending...'
+        setButtonText('Sending...');
         emailjs.sendForm('service_sg0dok8', 'template_58icbzb', form.current, 'pVeGkWhea1hZ_FDNi')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-      };
+            .then((result) => {
+                console.log(result.text);
+                // clear form fields
+                form.current.reset();
+                // update button text
+                setButtonText('send');
+                // update status message
+                setStatus({ success: true, message: "Message sent successfully! You'll be contacted soon." });
+            }, (error) => {
+                console.log(error.text);
+                // Update status message
+                setStatus({ success: false, message: 'Failed to send message. Please try again.' });
+            });
+    };
 
-    
+
 
     return (
         <>
@@ -133,14 +142,14 @@ const Contacts = () => {
                                 <Row>
 
                                     <Col sm={6} className='px-1'>
-                                        <input type="text" 
-                                        name='firstName' placeholder='First Name' />
+                                        <input type="text"
+                                            name='firstName' placeholder='First Name' />
                                     </Col>
                                     <Col sm={6} className='px-1'>
                                         <input type="text" placeholder='Last Name' name='lastName' />
                                     </Col>
                                     <Col sm={6} className='px-1'>
-                                        <input type="email" placeholder='Email' name='email'/>
+                                        <input type="email" placeholder='Email' name='email' />
                                     </Col>
                                     <Col sm={6} className='px-1'>
                                         <input type="tel" placeholder='Phone Number' name='phone' />
@@ -148,11 +157,15 @@ const Contacts = () => {
                                     <Col>
                                         <textarea rows="8" placeholder='write your message here' name='message'>
                                         </textarea>
+                                        {
+                                        status.message &&
+                                        <Col sm={12}>
+                                            <p className={status.success === false ? "danger" : "success"}> {status.message} </p>
+                                        </Col>
+                                    }
                                         <button type='submit' value='send'> <span>{buttonText}</span></button>
                                     </Col>
-                                    {/* <Col>
-                                            <p className=''>  </p>
-                                        </Col> */}
+                                    
 
                                 </Row>
                             </form>
