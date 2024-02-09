@@ -95,52 +95,29 @@
 
 
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import contactImg from '../assets/img/contact-img.svg'
 import { Container, Row, Col } from 'react-bootstrap'
+// import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
     const [buttonText, setButtonText] = useState('send');
 
-    var Email = {
-        send: function (a) {
-            return new Promise(function (n, e) {
-                a.nocache = Math.floor(1e6 * Math.random() + 1), 
-                a.Action = "Send";
-                var t = JSON.stringify(a);
-                Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) })
-            })
-        }, ajaxPost: function (e, n, t) {
-            var a = Email.createCORSRequest("POST", e);
-            a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () {
-                var e = a.responseText;
-                null != t && t(e)
-            }, a.send(n)
-        }, ajax: function (e, n) {
-            var t = Email.createCORSRequest("GET", e);
-            t.onload = function () {
-                var e = t.responseText;
-                null != n && n(e)
-            }, t.send()
-        }, createCORSRequest: function (e, n) {
-            var t = new XMLHttpRequest;
-            return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
-        }
-    };
+    const form = useRef();
 
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "username",
-            Password: "password",
-            To: 'them@website.com',
-            From: "you@isp.com",
-            Subject: "This is the subject",
-            Body: "And this is the body"
-        }).then(
-            message => alert(message)
-        );
-    }
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_sg0dok8', 'template_58icbzb', form.current, 'pVeGkWhea1hZ_FDNi')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+
+    
 
     return (
         <>
@@ -148,27 +125,30 @@ const Contacts = () => {
                 <Container>
                     <Row className="align-items-center">
                         <Col md={6}>
-                            <img src={contactImg} alt="" srcset="" />
+                            <img src={contactImg} />
                         </Col>
                         <Col md={6}>
                             <h2>Get in touch</h2>
-                            <form action="" onSubmit={sendEmail()}>
+                            <form ref={form} onSubmit={sendEmail}>
                                 <Row>
 
                                     <Col sm={6} className='px-1'>
-                                        <input type="text" value="" placeholder='First Name' onChange='' />
+                                        <input type="text" 
+                                        name='firstName' placeholder='First Name' />
                                     </Col>
                                     <Col sm={6} className='px-1'>
-                                        <input type="text" value='' placeholder='Last Name' onChange='' />
+                                        <input type="text" placeholder='Last Name' name='lastName' />
                                     </Col>
                                     <Col sm={6} className='px-1'>
-                                        <input type="email" value='' placeholder='Email' onChange='' />
+                                        <input type="email" placeholder='Email' name='email'/>
                                     </Col>
                                     <Col sm={6} className='px-1'>
-                                        <input type="tel" value='' placeholder='Phone Number' onChange='' />
+                                        <input type="tel" placeholder='Phone Number' name='phone' />
                                     </Col>
                                     <Col>
-                                        <textarea rows="8" value='' placeholder='write your message here' onChange=''></textarea>                                     <button type='submit'> <span>{buttonText}</span></button>
+                                        <textarea rows="8" placeholder='write your message here' name='message'>
+                                        </textarea>
+                                        <button type='submit' value='send'> <span>{buttonText}</span></button>
                                     </Col>
                                     {/* <Col>
                                             <p className=''>  </p>
