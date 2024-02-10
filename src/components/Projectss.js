@@ -9,6 +9,7 @@ import fl from '../assets/img/fl.png'
 import cred from '../assets/img/cred.png'
 import zomato from '../assets/img/zomato.png'
 import tinder from '../assets/img/tinder.png'
+import tinder1 from '../assets/img/tinder-logo.png'
 
 const Projectss = () => {
   const projects = [
@@ -27,8 +28,9 @@ const Projectss = () => {
     {
       title: "Tinder Clone",
       description: "Tinder Clone using react, MaterialUi and Firebase",
-      imgUrl: tinder,
-      url: 'https://tinder-by-pinju.vercel.app'
+      imgUrl: tinder1,
+      url: '',
+      // url: 'https://tinder-by-pinju.vercel.app',
     },
     {
       title: "Ask her out",
