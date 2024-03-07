@@ -1,15 +1,16 @@
-import React from 'react'
+import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import ProjectCard from './ProjectCard';
-import unclickable from '../assets/img/unclickable.jpg'
-import iphone from '../assets/img/iphone.png'
-import qr from '../assets/img/qr.png'
-import fl from '../assets/img/fl.png'
-import cred from '../assets/img/cred.png'
-import zomato from '../assets/img/zomato.png'
-import tinder from '../assets/img/tinder.png'
-import tinder1 from '../assets/img/tinder-logo.png'
+import ProjectCard from "./ProjectCard";
+import unclickable from "../assets/img/unclickable.jpg";
+import iphone from "../assets/img/iphone.png";
+import qr from "../assets/img/qr.png";
+import fl from "../assets/img/fl.png";
+import cred from "../assets/img/cred.png";
+import zomato from "../assets/img/zomato.png";
+import tinder from "../assets/img/tinder.png";
+import tinder1 from "../assets/img/tinder-logo.png";
+import youtbe from "../assets/img/youtube.png";
 
 const Projectss = () => {
   const projects = [
@@ -17,26 +18,27 @@ const Projectss = () => {
       title: "Cred Clone",
       description: "Clone of Cred's site using React",
       imgUrl: cred,
-      url: 'https://cred-by-pinju.vercel.app',
+      url: "https://cred-by-pinju.vercel.app",
     },
     {
-      title: 'Zomato Desktop Clone',
-      description: 'Clone of Zomato using React, MaterialUI',
+      title: "Zomato Desktop Clone",
+      description: "Clone of Zomato using React, MaterialUI",
       imgUrl: zomato,
-      url: 'https://zomato-by-pinju.vercel.app', 
+      url: "https://zomato-by-pinju.vercel.app",
     },
     {
       title: "Tinder Clone",
       description: "Tinder Clone using react, MaterialUi and Firebase",
       imgUrl: tinder1,
-      url: '',
+      url: "",
       // url: 'https://tinder-by-pinju.vercel.app',
     },
     {
       title: "Ask her out",
-      description: "Website to ask her on a coffe date where she can't click no",
+      description:
+        "Website to ask her on a coffe date where she can't click no",
       imgUrl: unclickable,
-      url: 'https://pinju-date-proposal.vercel.app/'
+      url: "https://pinju-date-proposal.vercel.app/",
     },
     {
       title: "QR Code Generator",
@@ -44,9 +46,10 @@ const Projectss = () => {
       imgUrl: qr,
     },
     {
-      title: "Sweet Delight",
-      description: "Design & Development",
-      imgUrl: fl,
+      title: "YouTube Clone",
+      description: "Fully working youtube clone",
+      imgUrl: youtbe,
+      url: "https://youtube-by-pinju.vercel.app/",
     },
   ];
   return (
@@ -59,25 +62,24 @@ const Projectss = () => {
               <p> Here's a collection of some of the recent projects. </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Tab.Content id="slideInUp">
-                    <Row>
-                      {
-                        projects.map((project, index) => {
-                          return (
-                            <ProjectCard key={index}
-                            {...project} />
-                          )
-                        })
-                      }
-                    </Row>
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
                 </Tab.Content>
               </Tab.Container>
             </Col>
           </Row>
         </Container>
-      <img className="background-image-right" src={colorSharp2} alt='Bro'></img>
+        <img
+          className="background-image-right"
+          src={colorSharp2}
+          alt="Bro"
+        ></img>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Projectss
+export default Projectss;
