@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 import unclickable from "../assets/img/unclickable.jpg";
 import iphone from "../assets/img/iphone.png";
 import qr from "../assets/img/qr.png";
+import airbnb from "../assets/img/airbnb.png";
 import fl from "../assets/img/fl.png";
 import cred from "../assets/img/cred.png";
 import zomato from "../assets/img/zomato.png";
@@ -27,10 +28,10 @@ const Projectss = () => {
       url: "https://zomato-by-pinju.vercel.app",
     },
     {
-      title: "Tinder Clone",
-      description: "Tinder Clone using react, MaterialUi and Firebase",
-      imgUrl: tinder1,
-      url: "",
+      title: "Airbnb Desktop Clone",
+      description: "Airbnb Clone using react, MaterialUi and Firebase",
+      imgUrl: airbnb,
+      url: "https://airbnb-by-pinju.vercel.app",
       // url: 'https://tinder-by-pinju.vercel.app',
     },
     {
